@@ -1,244 +1,253 @@
+// Создание переменной que в который хранится словарь(Вопросы),а в этом словаре находится другой словарь(варианты ответов)
+let que = {
+  'Ухаживать за животными или выбрать, машины и приборы?':{
+    'Ухаживать за животными': 'a',
+    'Обслуживать машины и приборы': 'b',
+  },
+  'Помогать больным людям, лечить их или cоставлять таблицы, схемы, программы для вычислительных машин?':{
+    'Помогать больным людям, лечить их': 'c',
+    'Cоставлять таблицы, схемы, программы для вычислительных машин': 'e',
+  },
+  'Следить за качеством книжных иллюстраций, плакатов, художественных открыток, грампластинок или следить за состоянием, развитием растениий?':{
+    'Следить за качеством книжных иллюстраций, плакатов, художественных открыток, грампластинок': 'd',
+    'Следить за состоянием, развитием растениий': 'a',
+  },
+  'Обрабатывать материалы (дерево, ткань, пластмассу, металл и т.п.) или доводить товары до потребителя (рекламировать, продавать)?':{
+    'Ухаживать за животными': 'b',
+    'Доводить товары до потребителя (рекламировать, продавать)': 'c',
+  },
+  'Обсуждать научно-популярные книги, статьи или обсуждать художественные книги (или пьесы, концерты)?':{
+    'Обсуждать научно-популярные книги, статьи': 'e',
+    'Обсуждать художественные книги (или пьесы, концерты)': 'd',
+  },
+  'Выращивать молодняк (животных какой-либо породы) или тренировать товарищей (или младших) в выполнении каких-либо действий (трудовых, учебных, спортивных)?':{
+    'Выращивать молодняк (животных какой-либо породы)': 'a',
+    'Тренировать товарищей (или младших) в выполнении каких-либо действий (трудовых, учебных, спортивных)': 'c',
+  },
+  'Копировать рисунки, изображения (или настраивать музыкальные инструменты) или управлять каким-либо грузовым (подъемным или транспортным) средством: подъемным краном, трактором, тепловозом и др.?':{
+    'Копировать рисунки, изображения (или настраивать музыкальные инструменты': 'd',
+    'Управлять каким-либо грузовым (подъемным или транспортным) средством: подъемным краном, трактором, тепловозом и др.': 'b',
+  },
+  'Сообщать, разъяснять людям нужные им сведения (в справочном бюро, на экскурсии и т.д.) или художественно оформлять выставки, витрины (или участвовать в подготовке пьес, концертов)?':{
+    'Сообщать, разъяснять людям нужные им сведения (в справочном бюро, на экскурсии и т.д.)': 'c',
+    'Художественно оформлять выставки, витрины (или участвовать в подготовке пьес, концертов)': 'd',
+  },
+  'Ремонтировать вещи, изделия (одежду, технику), жилище или искать и исправлять ошибки в текстах, таблицах, рисунках?':{
+    'Ремонтировать вещи, изделия (одежду, технику), жилище': 'b',
+    'Искать и исправлять ошибки в текстах,таблицах, рисунках или искать и исправлять ошибки в текстах,таблицах, рисунках': 'e',
+  },
+  'Лечить животных или выполнять вычисления, расчеты?':{
+    'Лечить животных': 'a',
+    'Выполнять вычисления, расчеты.': 'e',
+  },
+  'Выводить новые сорта растений или конструировать, проектировать новые виды промышленных изделий (машины или одежду, дома, продукты питания и т.п.)?':{
+    'Выводить новые сорта растений': 'a',
+    'Конструировать, проектировать новые виды промышленных изделий (машины или одежду, дома, продукты питания и т.п.)': 'b',
+  },
+  'Разбирать споры, ссоры между людьми, убеждать, разъяснять поощрять, наказывать или разбираться в чертежах, схемах, таблицах (проверять, уточнять, приводить в порядок)?':{
+    'Разбирать споры, ссоры между людьми, убеждать, разъяснять поощрять, наказывать': 'c',
+    'Разбираться в чертежах, схемах, таблицах (проверять, уточнять, приводить в порядок)': 'e',
+  },
+  'Наблюдать, изучать работу кружков художественной самодеятельности или наблюдать, изучать жизнь микробов?':{
+    'Наблюдать, изучать работу кружков художественной самодеятельности': 'd',
+    'Наблюдать, изучать жизнь микробов': 'a',
+  },
+  'Обсуждать, налаживать медицинские приборы, аппараты или оказывать людям медицинскую помощь при ранениях, ушибах, ожогах и т.п.?':{
+    'Обсуждать, налаживать медицинские приборы, аппараты': 'b',
+    'Оказывать людям медицинскую помощь при ранениях, ушибах, ожогах и т.п.': 'c',
+  },
+  'Составлять точные описания - отчеты о наблюдаемых явлениях, событиях, измеряемых объектах и др или художественно описывать, изображать события (наблюдаемые или представляемые)?':{
+    'Составлять точные описания - отчеты о наблюдаемых явлениях, событиях, измеряемых объектах и др': 'e',
+    'Художественно описывать, изображать события (наблюдаемые или представляемые)': 'd',
+  },
+  'Делать лабораторные анализы в больнице или принимать, осматривать больных, беседовать с ними, назначать лечение?':{
+    'Делать лабораторные анализы в больнице': 'a',
+    'Принимать, осматривать больных, беседовать с ними, назначать лечение': 'c',
+  },
+  'Красить или расписывать стены помещений, поверхность изделий или осуществлять монтаж зданий или сборку машин, приборов?':{
+    'Красить или расписывать стены помещений, поверхность изделий': 'd',
+    'Осуществлять монтаж зданий или сборку машин, приборов': 'b',
+  },
+  'Организовывать культпоходы сверстников или младших в театры, музеи, экскурсии, туристические походы и т.п. или играть на сцене, принимать участие в концертах?':{
+    'Организовывать культпоходы сверстников или младших в театры, музеи, экскурсии, туристические походы и т.п.': 'c',
+    'Играть на сцене, принимать участие в концертах': 'd',
+  },
+  'Изготовлять по чертежам детали, изделия (машины, одежду) строить здания или заниматься черчением, копированием чертежей, карт?':{
+    'Изготовлять по чертежам детали, изделия (машины, одежду) строить здания': 'b',
+    'Заниматься черчением, копированием чертежей, карт': 'e',
+  },
+  'Вести борьбу с болезнями растений, с вредителями леса, сада или работать на клавишных машинах?':{
+    'Вести борьбу с болезнями растений, с вредителями леса, сада': 'a',
+    'Работать на клавишных машинах': 'e',
+  },
+}
+
+let job = {
+  "priroda":"Представителей этих профессий объединяет одно очень важное качество — любовь к природе.Но любовь не созерцательная. Которой обладают практически все люди,считая природу наиболее благоприятной средой для отдыха, а деятельная связанная спознанием ее законов и применением их. Одно дело — любить животных и растения,играть с ними, радоваться им. И совсем другое — регулярно, день за днем ухаживатьза ними, наблюдать, лечить, выгуливать, не считаясь с личным временем и планами.Специалист должен не просто все знать о живых организмах, но и прогнозироватьвозможные изменения в них и принимать меры. От человека требуется инициатива исамостоятельность в решении конкретных задач, заботливость, терпение идальновидность. Человек, работающий в сфере «человек-природа», должен бытьспокойным и уравновешенным.\n\tСпециалистам в этой области приходится выполнять следующие виды деятельности:\n\t изучать, исследовать, анализировать состояние, условия жизни растений или животных (агроном, микробиолог, зоотехник, гидробиолог, агрохимик, фитопатолог);\n\t выращивать растения, ухаживать за животными (лесовод, полевод, цветовод, овощевод, птицевод, животновод, садовод, пчеловод);\n\t проводить профилактику заболеваний растений и животных (ветеринар, врач карантинной службы). ",
+  
+  "technik":"Особенность технических объектов в том, что они, как правило, могут быть точно измерены по многим признакам. При их обработке, преобразовании, перемещенииили оценке от работника требуется точность, определенность действий. Техника как предмет руда представляет широкие возможности для новаторства, выдумки,творчества, поэтому важное значение приобретает такое качество, как практическоемышление. Техническая фантазия, способность мысленно соединять и разъединятьтехнические объекты и их части — важные условия для успеха в данной области.\n\tСпециалистам в этой области приходится выполнять следующие виды деятельности:\n\tСоздание, монтаж, сборка технических устройств (специалисты проектируют, конструируют технические системы, устройства, разрабатывают процессы их изготовления.Из отдельных узлов, деталей собирают машины, механизмы, приборы, регулируют и налаживают их);\n\tЭксплуатация технических устройств (специалисты работают на станках, управляют транспортом, автоматическими системами);\n\tРемонт технических устройств (специалисты выявляют, распознают неисправности технических систем, приборов, механизмов, ремонтируют, регулируют, налаживают их).",
+  
+ "znakovayasistema":"Мы встречаемся со знаками значительно чаще, чем обычно представляем себе. Это цифры. Коды, условные знаки, естественные или искусственные языки, чертежи, таблицы формулы. В любом случае человек воспринимает знак как символ реального объекта или явления. Поэтому специалисту, который работает со знаками, важно уметь с одной стороны, абстрагироваться от реальных физических, химически, механических свойств предметов, а с другой —представлять и воспринимать характеристики реальных явлений или объектов, стоящих за знаками. Чтобы успешно работать в какой-нибудь профессии данного типа, необходимо уметь мысленно погружаться в мир, казалось бы, сухих обозначений и сосредотачиваться на сведениях, которые они несут в себе. Особые требования профессии этого типа предъявляют к вниманию\n\tПредметом труда для представителей большинства профессий типа «человек знаковая система» являются:\n\tТексты на родном или иностранном языках (редактор, корректор, машинистка, делопроизводитель, телеграфист, наборщик);\n\tЦифры, формулы, таблицы (программист, оператор ЗВМ, экономист, бухгалтер, статистик);\n\tЧертежи, схемы, карты (конструктор, инженер-технолог, чертежник, копировальщик, штурман, геодезист);\n\tЗвуковые сигналы (радист, стенографист, телефонист, звукооператор).",
+  
+    "hydozeshviniyobraz":"Важнейшие требования, которые предъявляют профессии, связанные с изобразительной, музыкальной, литературно-художественной, актерско-сценической деятельностью человека — наличие способности к искусствам, творческое воображение, образное мышление, талант, трудолюбие.\n\tCоздание, проектирование художественных произведений (писатель, художник, композитор, модельер, архитектор, скульптор, журналист, хореограф);\n\tВоспроизведение, изготовление различных изделий по образцу (ювелир, реставратор, гравер, музыкант, актер, столяр-краснодеревщик);\n\tРазмножение художественных произведений в массовом производстве (мастер по росписи фарфора, шлифовщик по камню и хрусталю, маляр, печатник). ",
+  
+  "chelovek":"Главное содержание труда в профессиях типа «человек-человек» сводится к взаимодействию между людьми. Если не наладится это взаимодействие, значит, не наладится и работа. Качества, необходимые для работы с людьми: устойчивое, хорошее настроение в процессе работы с людьми, потребность в общении, способность мысленно ставить себя на место другого человека, быстро понимать намерения, помыслы, настроение людей, умение разбираться в человеческих взаимоотношениях, хорошая память (умение держать в уме имена и особенности многих людей), терпение.\n\tСпециалистам в этой области приходится выполнять следующие виды деятельности:\n\tвоспитание, обучение людей (воспитатель, учитель, спортивный тренер);\n\tмедицинское обслуживание (врач, фельдшер, медсестра, няня);\n\tбытовое обслуживание (продавец, парикмахер, официант, вахтер);\n\tинформационное обслуживание (библиотекарь, экскурсовод, лектор);\n\tзащита общества и государства (юрист, милиционер, инспектор, военнослужащий)."
+}
+
 let count_chelovekpriroda = 0;
 let count_chelovektehnica = 0;
 let count_chelovekznaksis = 0;
 let count_chelovekhydoshobraz = 0;
 let count_chelovekchelovek = 0;
 
-var gar;
+let true_ans = 0;
+let count_que = 0;
+let count_close = 0;
+let result_test = "";
 
-function check_answer(){
+let dict_que_div = document.getElementById('que_div');
+let ans1_que = document.getElementById('ans1');
+let ans2_que = document.getElementById('ans2');
+let lab1_que = document.getElementById('lab1');
+let lab2_que = document.getElementById('lab2');
 
-  let que1 = document.querySelector('input[name="que1"]:checked');
-  let que2 = document.querySelector('input[name="que2"]:checked');
-  let que3 = document.querySelector('input[name="que3"]:checked');
-  let que4 = document.querySelector('input[name="que4"]:checked');
-  let que5 = document.querySelector('input[name="que5"]:checked');
-  let que6 = document.querySelector('input[name = "que6"]:checked');
-  let que7 = document.querySelector('input[name = "que7"]:checked');
-  let que8 = document.querySelector('input[name = "que8"]:checked');
-  let que9 = document.querySelector('input[name = "que9"]:checked');
-  let que10 = document.querySelector('input[name = "que10"]:checked');
-  let que11= document.querySelector('input[name = "que11"]:checked');
-  let que12 = document.querySelector('input[name = "que12"]:checked');
-  let que13 = document.querySelector('input[name = "que13"]:checked');
-  let que14 = document.querySelector('input[name = "que14"]:checked');
-  let que15 = document.querySelector('input[name = "que15"]:checked');
-  let que16 = document.querySelector('input[name = "que16"]:checked');
-  let que17 = document.querySelector('input[name = "que17"]:checked');
-  let que18 = document.querySelector('input[name = "que18"]:checked');
-  let que19 = document.querySelector('input[name = "que19"]:checked');
-  let que20 = document.querySelector('input[name = "que20"]:checked');
-  if (que1 !=null){
-    if(que1.value == "a"){
-      count_chelovekpriroda +=1;
-      console.log("1a");
-    }else{
-      count_chelovektehnica +=1;
-      console.log("1b");
-    }
-  }else{
-    console.log("В1")  
-  }
-    if (que2 !=null){
-      if(que2.value == "a"){
-        count_chelovekchelovek +=1;
-        console.log("2a");
-      }else{
-        count_chelovekznaksis +=1;
-        console.log("2b");
-      }
-    }else{
-    console.log("В2")  
-  }
-    if (que3 !=null){
-      if(que3.value == "a"){
-      count_chelovekhydoshobraz +=1;
-      console.log("3a");
-    }else{
-      count_chelovekpriroda +=1;
-      console.log("3b");
-    }
-  }else{
-    console.log("В3")  
-  }
-    if (que4 !=null){
-    if(que4.value == "a"){
-      count_chelovektehnica +=1;
-      console.log("4a");
-    }else{
-      count_chelovekchelovek +=1;
-      console.log("4b");
-    }
-  }else{
-    console.log("В4")  
-  }
-    if (que5 !=null){
-    if(que5.value == "a"){
-      count_chelovekznaksis +=1;
-    }else{
-      count_chelovekhydoshobraz +=1;
-    }
-  }else{
-    console.log("В5")  
-  }
-    if (que6 !=null){
-    if(que6.value == "a"){
-      count_chelovekpriroda +=1;
-    }else{
-      count_chelovekchelovek +=1;
-    }
-  }else{
-    console.log("В6")  
-  }
-    if (que7 !=null){
-    if(que7.value == "a"){
-      count_chelovekhydoshobraz +=1;
-    }else{
-      count_chelovektehnica +=1;
-    }
-  }else{
-    console.log("В7")  
-  }
-  if (que8 !=null){
-    if(que8.value == "a"){
-      count_chelovekchelovek +=1;
-    }else{
-      count_chelovekhydoshobraz +=1;
-    }
-  }else{
-    console.log("В8")  
-  }
-  if (que9 !=null){
-    if(que9.value == "a"){
-      count_chelovektehnica +=1;
-    }else{
-      count_chelovekznaksis +=1;
-    }
-  }else{
-    console.log("В9")  
-  }
-  if (que10 !=null){
-    if(que10.value == "a"){
-      count_chelovekpriroda  +=1;
-    }else{
-      count_chelovekznaksis +=1;
-    }
-  }else{
-    console.log("В10")  
-  }
-  if (que11 !=null){
-    if(que11.value == "a"){
-      count_chelovekpriroda +=1;
-    }else{
-      count_chelovektehnica +=1;
-    }
-  }else{
-    console.log("В11")  
-  }
-  if (que12 !=null){
-    if(que12.value == "a"){
-      count_chelovekchelovek +=1;
-    }else{
-      count_chelovekznaksis +=1;
-    }
-  }else{
-    console.log("В12")  
-  }
-  if (que13 !=null){
-    if(que13.value == "a"){
-      count_chelovekhydoshobraz +=1;
-    }else{
-      count_chelovekpriroda +=1;
-    }
-  }else{
-    console.log("В13")  
-  }
-  if (que14 !=null){
-    if(que14.value == "a"){
-      count_chelovektehnica +=1;
-    }else{
-      count_chelovekchelovek +=1;
-    }
-  }else{
-    console.log("В14")  
-  }
-  if (que15 !=null){
-    if(que15.value == "a"){
-      count_chelovekznaksis +=1;
-    }else{
-      count_chelovekhydoshobraz +=1;
-    }
-  }else{
-    console.log("В15")  
-  }
-  if (que16 !=null){
-    if(que16.value == "a"){
-      count_chelovekpriroda +=1;
-    }else{
-      count_chelovekchelovek +=1;
-    }
-  }else{
-    console.log("В16")  
-  }
-  if (que17 !=null){
-    if(que17.value == "a"){
-      count_chelovekhydoshobraz +=1;
-    }else{
-      count_chelovektehnica +=1;
-    }
-  }else{
-    console.log("В17")  
-  }
-  if (que18 !=null){
-    if(que18.value == "a"){
-      count_chelovekchelovek +=1;
-    }else{
-      count_chelovekhydoshobraz +=1;
-    }
-  }else{
-    console.log("В18")  
-  }
-  if (que19 !=null){
-    if(que19.value == "a"){
-      count_chelovektehnica +=1;
-    }else{
-      count_chelovekznaksis +=1;
-    }
-  }else{
-    console.log("В19")  
-  }
-  if (que20 !=null){
-    if(que20.value == "a"){
-      count_chelovekpriroda +=1;
-    }else{
-      count_chelovekznaksis +=1;
-    }
-  }else{
-    console.log("В20")  
-  }
-  
-  
-  console.log("count_chelovekpriroda");
-  console.log(count_chelovekpriroda);
-  console.log("count_chelovektehnica");
-  console.log(count_chelovektehnica);
-  console.log("count_chelovekznaksis");
-  console.log(count_chelovekznaksis);
-  console.log("count_chelovekhydoshobraz");
-  console.log(count_chelovekhydoshobraz);
-  console.log("count_chelovekchelovek");
-  console.log(count_chelovekchelovek);
+let que_size = Object.keys(que).length;
+console.log("Количество вопросов в тесте: " + que_size);
+let current_que_view = document.getElementById('title_que');
+current_que_view.innerHTML = "Текущий вопрос " + Number(count_que + 1) + "/" + Number(que_size);
 
-  gar = {
-  "priroda": count_chelovekpriroda,
-  "technik": count_chelovektehnica,
-  "chelovek": count_chelovekchelovek,
-  "hydozeshviniyobraz": count_chelovekhydoshobraz,
-  "znakovayasistema": count_chelovekznaksis
-  };
-  
-  console.log(f(gar)[1]);
+console.log("Первый: " + Object.keys(que)[0]);
+dict_que_div.innerHTML = Object.keys(que)[0];
+
+
+let a = 0;
+for(let e_que in Object.values(que)[0]){
+  console.log("--- " + e_que)
+  if (a == 0){
+    lab1_que.innerHTML = e_que;
+  }
+  if (a == 1){
+    lab2_que.innerHTML = e_que;
+  }
+  a++;
 }
+
+let b = 0 ;
+for(let [key, values] of Object.entries(Object.values(que)[0])){
+  if (b == 0){
+    document.getElementById("ans1").value = values;
+  }
+  if (b == 1){
+    document.getElementById("ans2").value = values;
+  }
+  b++;
+}
+console.log("-- " + Object.values(Object.values(que)[0]));
+
+
+
+function next_que(){
+  console.log("Выбранный ответ");
+  console.log("1 Ответ: " + ans1_que.checked);
+  console.log("2 Ответ: " + ans2_que.checked);
+  if(ans1_que.checked == false && ans2_que.checked == false){
+    lab1_que.style.border = "2px solid red";
+    lab2_que.style.border = "2px solid red";  
+  }
+  else{
+    console.log("Текущий вопрос: " + count_que);
+    let answer = document.querySelector("input[name=q]:checked");
+    let ia = answer.value;
+    console.log("Выбранный ответ из вопросов: " + ia);
+  
+    if(ia == "a") count_chelovekpriroda++;
+    if(ia == "b") count_chelovektehnica++;count_chelovekznaksis
+    if(ia == "c") count_chelovekchelovek++; 
+    if(ia == "d") count_chelovekhydoshobraz++;
+    if(ia == "e") count_chelovekznaksis++;
+    
+    console.log("count_chelovekpriroda: " + count_chelovekpriroda);
+    console.log("count_chelovektehnica: " + count_chelovektehnica);
+    console.log("count_chelovekznaksis: " + count_chelovekznaksis);
+    console.log("count_chelovekhydoshobraz: " + count_chelovekhydoshobraz);
+    console.log("count_chelovekchelovek: " + count_chelovekchelovek);
+  
+    ans1_que.checked = false;
+    ans2_que.checked = false;
+    document.getElementById("circle1").style.border = "1px solid rgb(63, 42, 255)";
+    document.getElementById("circle2").style.border = "1px solid rgb(63, 42, 255)";
+    
+    if (count_que < que_size - 1){
+      let b = 0 ;
+      for(let [key, values] of Object.entries(Object.values(que)[count_que + 1])){
+        if (b == 0){
+          document.getElementById("ans1").value = values;
+        }
+        if (b == 1){
+          document.getElementById("ans2").value = values;
+        }
+        b++;
+      }
+  
+      count_que++;
+      console.log("Текущий вопрос: " + count_que);
+      current_que_view.innerHTML = "Текущий вопрос " + Number(count_que + 1) + "/" + Number(que_size);
+      dict_que_div.innerHTML = Object.keys(que)[count_que];
+      console.log(Object.keys(que)[count_que]);
+      let a = 0;
+      for(let e_que in Object.values(que)[count_que]){
+      console.log("--- " + e_que)
+        if (a == 0){
+          lab1_que.innerHTML = e_que;
+        }
+        if (a == 1){
+          lab2_que.innerHTML = e_que;
+        }
+        a++;
+      }
+      // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    }else{
+      document.getElementById("next").value= "Завершить";
+      console.log("Вопросы закончились!")
+      
+      if (count_close == 1){
+        lastque();
+      }
+      count_close++;
+  
+      gar = {
+        "priroda": count_chelovekpriroda,
+        "technik": count_chelovektehnica,
+        "chelovek": count_chelovekchelovek,
+        "hydozeshviniyobraz": count_chelovekhydoshobraz,
+        "znakovayasistema": count_chelovekznaksis
+      };
+    
+      console.log(f(gar)[1]);
+      result_test = f(gar)[1];
+    }
+  } 
+}
+
+function circleBorder1(){
+  lab1_que.style.border = "none";
+  lab2_que.style.border = "none"; 
+  if(ans2.checked == true){
+    document.getElementById("circle2").style.border = "1px solid rgb(63, 42, 255)";
+  }
+  document.getElementById("circle1").style.border = "7px solid rgb(63, 42, 255)";
+  
+}
+
+function circleBorder2(){
+  lab1_que.style.border = "none";
+  lab2_que.style.border = "none"; 
+  if(ans1.checked == true){
+    document.getElementById("circle1").style.border = "1px solid rgb(63, 42, 255)";
+  }
+   document.getElementById("circle2").style.border = "7px solid rgb(63, 42, 255)";
+}
+
 
 function f(dictProf) {
   var IkX, kX;
@@ -294,3 +303,42 @@ function f(dictProf) {
 }
 
 
+function lastque(){
+  document.getElementById("que_div").style.visibility  = 'hidden';
+  document.getElementById("circle1").style.visibility  = 'hidden';
+  document.getElementById("circle2").style.visibility  = 'hidden';
+  document.getElementById("ans1").style.visibility  = 'hidden';
+  document.getElementById("ans2").style.visibility  = 'hidden';
+  document.getElementById("title_que").style.visibility  = 'hidden';
+  document.getElementById("next").style.visibility  = 'hidden';
+  document.getElementById("lab1").style.visibility  = 'hidden';
+  document.getElementById("lab2").style.visibility  = 'hidden';
+  console.log(result_test);
+  console.log(Object.keys(job)[0]);
+  console.log(Object.keys(job)[1]);
+  console.log(Object.keys(job)[2]);
+  console.log(Object.keys(job)[3]);
+  console.log(Object.keys(job)[4]);
+  if (result_test == Object.keys(job)[0]){
+    document.getElementById("div_test").innerHTML= Object.values(job)[0];
+    console.log("object 0");
+  }
+  if (result_test == Object.keys(job)[1]){
+    document.getElementById("div_test").innerHTML= Object.values(job)[1];
+    console.log("object 1");
+  }
+  if (result_test == Object.keys(job)[2]){
+    document.getElementById("div_test").innerHTML= Object.values(job)[2];
+    console.log("object 2");
+  }
+  if (result_test == Object.keys(job)[3]){
+    document.getElementById("div_test").innerHTML= Object.values(job)[3];
+    console.log("object 3");
+    
+  }
+  if (result_test == Object.keys(job)[4]){
+    document.getElementById("div_test").innerHTML= Object.values(job)[4];
+    console.log("object 4");
+  }
+  
+}
