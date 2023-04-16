@@ -7,7 +7,7 @@
     <title>replit</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
-  <header>
+  <header class="header">
     <button id="menu-toggle" class="btn-menu">
       <span></span>
     </button>
@@ -21,16 +21,17 @@
     </nav>
   </header>
   <body>
-    <div class="gradient-background"></div>
-    
-    <div class="hello_site">
-      <h1>Приветсвуем вас на сайте по<br>помощи школьникам под названием неизвестно!</br>Если вы не знаете какие вам подходят профили школьного класса, то ниже вы можете пройти профориентанционный тест.А если уже знаете, то ниже можете подобрать школы по данным профилям для этого в шапке сайта нажмите «Подобрать школу»</h1>
+    <div class="bgd_main"></div>
+    <div class="test_container">
+      <div class="hello_site">
+        <p>Приветсвуем вас на сайте по<br>помощи школьникам под названием неизвестно!</br>Если вы не знаете какие вам подходят профили школьного класса, то ниже вы можете пройти профориентанционный тест. А если уже знаете, то ниже можете подобрать школы по данным профилям для этого в шапке сайта нажмите «Подобрать школу»</p>
     </div>
-    <div class="test_button">
-      <li><a href="test.html">Пройти тест</a></li>
     </div>
-    
-    <footer>
+
+    <div class=button_container>
+      <button class="test_button btn-1" onclick='location.href="test.html"'>Пройти тест</button>
+    </div>
+    <footer class="footer">
       <p>&copy; 2023</p>
     </footer>
     

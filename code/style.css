@@ -9,18 +9,26 @@ html, body {
   -ms-user-select: none;      /* IE 10+ */
   user-select: none;          /* Standard syntax */
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 h1, h2, h3, h4, h5, h6, p{
   margin: 0;
 }
 
 .header{
-  position: fixed;
+  height: 64px;
+  background-color: #558DE0;
+  color: #fff;
+  /*padding: 20px;*/
 }
 .menu {
   display: flex;
-  justify-content: space-between;
-  background-color: #558DE0;
+  /*justify-content: space-between;*/
+  justify-content: center;
   
 }
 
@@ -44,25 +52,66 @@ h1, h2, h3, h4, h5, h6, p{
 .menu ul li a {
   text-decoration: none;
   color: #fff;
-  font-weight: bold;
+  /*font-weight: ;*/
   font-size: 1.2rem;
 }
-.test_button{
+.button_container{
+  margin-top: 40px;
   text-align: center;
 }
-.test_button li{
+.test_button {
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+.btn-1 {
+  background: rgb(6,14,131);
+  background: linear-gradient(0deg, rgba(6,14,131,1) 0%, rgba(12,25,180,1) 100%);
+  border: none;
+}
+.btn-1:hover {
+   background: rgb(0,3,255);
+background: linear-gradient(0deg, rgba(0,3,255,1) 0%, rgba(2,126,251,1) 100%);
+}
+/*.test_button li{
   list-style-type: none;
 }
 .test_button li a{
   text-decoration: none;
-  color: #fff;
-  font-size: 60px;
-  background-color: #558DE0;
+  color: #000;
+  font-size: 20px;
+  background-color: #fff;
+  border: 3px solid #ccc;
+  border-radius: 2px;
+  padding: 5px 5px;*/
+  
   
   
 }
 .output_test{
   visibility: hidden;
+}
+.bgd_main{
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background
 }
 .gradient-background{
   z-index: -1;
@@ -87,16 +136,22 @@ h1, h2, h3, h4, h5, h6, p{
     background-position: 0% 50%;
   }
 }
+.test_container{
+  display: flex;
+  justify-content: center;
+}
 .hello_site {
-  font-size: 20px;
-  margin-bottom: 20px;
-  padding-right: 10%;
+  font-size: 24px;
+  width: 800px;
+  text-align: center;
+  margin-top: 20px;
+  align-self: center;
 }
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Or any other height you want */
+  /*height: 100vh;  Or any other height you want */
 }
 .main-content{
   position: relative;
@@ -144,6 +199,7 @@ h1, h2, h3, h4, h5, h6, p{
   border-radius: 50%;
   box-sizing: border-box;
   margin-top: 68px;
+  margin-left: 10px;
   flex: 0 0 auto;
   transition: border-color 0.15s ease-in-out 0s;
   border: 1px solid rgb(63, 42, 255);
@@ -173,6 +229,33 @@ h1, h2, h3, h4, h5, h6, p{
   cursor: pointer;
   flex: 1 1 0%;
   transition: background 0.1s ease-in-out 0s, color 0.1s ease-in-out 0s;
+
+}
+
+.eight_class{
+    height: 130px;
+    width: 130px;
+    background-color: #D9D9D9;
+    font-size: 64px;
+    border: 5px solid #000;
+  
+  }
+.btn_result_school{
+  visibility: hidden;
+}
+/*.button_for_class{
+  width: 100px;
+  height: 100px;
+  background-color: green;
+}*/
+.footer{
+    height: 56px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: #558DE0;
+    color: #fff;
 }
 @media screen and (min-width: 360px) and (max-width: 460px) and (orientation: portrait){
   .que-ans{
@@ -200,6 +283,7 @@ h1, h2, h3, h4, h5, h6, p{
     margin-bottom: 20px;
   }
 }
+.container
 @media screen and (min-width: 360px) and (max-width: 460px) and (orientation: landscape){
   
 }

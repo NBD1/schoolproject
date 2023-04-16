@@ -8,7 +8,7 @@
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-  <<header>
+  <header class="header">
     <button id="menu-toggle" class="btn-menu">
       <span></span>
     </button>
@@ -22,7 +22,6 @@
     </nav>
   </header>
     <title>Профориентационное тестирование</title>
-    <h1>Данное профориентационное тестирование сделанно по методу Климова</h1>
   <main>
     <div class="gradient-background"></div>
     <div class="container"> 
@@ -37,16 +36,17 @@
           <span id="circle1" class="circle"></span>
           <label  id="lab1" class="que-ans" for="ans1" onclick="circleBorder1()"></label>
         </div>
-        <div>
+        <div class="div_class">
           <input type="radio" id="ans2" class="radio_ans" name="q" value="1">
           <span id="circle2" class="circle"></span>
           <label id="lab2" class="que-ans" for="ans2" onclick="circleBorder2()"> </label>
         </div>
         <input id="next" class="btn-next" type="button" value="Следующий" onclick="next_que()">
+        <button id="id_btn_result_school" class="btn_result_school"  onclick="">Подходящие школы</button>
       </div>
     </div>
   </main>
-  <footer>
+  <footer class="footer">
     <p>&copy; 2023</p>
   </footer>
   <script src="script.js"></script>

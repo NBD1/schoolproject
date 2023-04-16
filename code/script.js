@@ -93,6 +93,24 @@ let job = {
   
   "chelovek":"Главное содержание труда в профессиях типа «человек-человек» сводится к взаимодействию между людьми. Если не наладится это взаимодействие, значит, не наладится и работа. Качества, необходимые для работы с людьми: устойчивое, хорошее настроение в процессе работы с людьми, потребность в общении, способность мысленно ставить себя на место другого человека, быстро понимать намерения, помыслы, настроение людей, умение разбираться в человеческих взаимоотношениях, хорошая память (умение держать в уме имена и особенности многих людей), терпение.\n\tСпециалистам в этой области приходится выполнять следующие виды деятельности:\n\tвоспитание, обучение людей (воспитатель, учитель, спортивный тренер);\n\tмедицинское обслуживание (врач, фельдшер, медсестра, няня);\n\tбытовое обслуживание (продавец, парикмахер, официант, вахтер);\n\tинформационное обслуживание (библиотекарь, экскурсовод, лектор);\n\tзащита общества и государства (юрист, милиционер, инспектор, военнослужащий)."
 }
+//Создание словаря в котором хранится 5 типов профессий, по классификации Е.А.Климова, а также профили для данных типов профессии
+let direction ={
+  "priroda":{
+    "directions in the 8th grade": "Для данного типа вам подходят следующие профили классов подходят следующие профили"
+    },
+  "technik" :{
+    "directions in the 8th grade": "Для данного типа вам подходят следующие профили классов подходят следующие профили"
+  },
+  "znakovayasistema":{
+    "directions in the 8th grade": "Для данного типа вам подходят следующие профили классов подходят следующие профили"
+  },
+  "hydozeshviniyobraz":{
+    "directions in the 8th grade": "Для данного типа вам подходят следующие профили классов подходят следующие профили"
+  },
+  "chelovek":{
+    "directions in the 8th grade": "Для данного типа вам подходят следующие профили классов подходят следующие профили"
+  }
+}
 
 console.log(Object.values(job)[0]);
 
@@ -247,6 +265,8 @@ function next_que(){
     
       console.log(f(gar)[1]);
       result_test = f(gar)[1];
+      
+      console.log("gar", result_test);
     }
   } 
 }
@@ -281,7 +301,7 @@ function f(dictProf) {
     IkX = "priroda";
   } else {
     if (dictProf["priroda"] === kX) {
-      IkX = IkX + " and priroda";
+      IkX = IkX + "priroda";
     }
   }
 
@@ -290,7 +310,7 @@ function f(dictProf) {
     IkX = "technik";
   } else {
     if (dictProf["technik"] === kX) {
-      IkX = IkX + " and technik";
+      IkX = IkX + " technik";
     }
   }
 
@@ -299,7 +319,7 @@ function f(dictProf) {
     IkX = "chelovek";
   } else {
     if (dictProf["chelovek"] === kX) {
-      IkX = IkX + " and chelovek";
+      IkX = IkX + " chelovek";
     }
   }
 
@@ -308,7 +328,7 @@ function f(dictProf) {
     IkX = "hydozeshviniyobraz";
   } else {
     if (dictProf["hydozeshviniyobraz"] === kX) {
-      IkX = IkX + " and hydozeshviniyobraz";
+      IkX = IkX + " hydozeshviniyobraz";
     }
   }
 
@@ -317,7 +337,7 @@ function f(dictProf) {
     IkX = "znakovayasistema";
   } else {
     if (dictProf["znakovayasistema"] === kX) {
-      IkX = IkX + " and znakovayasistema";
+      IkX = IkX + " znakovayasistema";
     }
   }
 
@@ -335,37 +355,42 @@ function lastque(){
   document.getElementById("next").style.visibility  = 'hidden';
   document.getElementById("lab1").style.visibility  = 'hidden';
   document.getElementById("lab2").style.visibility  = 'hidden';
-  console.log(result_test);
+  console.log("До спита", result_test);
   console.log(Object.keys(job)[0]);
   console.log(Object.keys(job)[1]);
   console.log(Object.keys(job)[2]);
   console.log(Object.keys(job)[3]);
   console.log(Object.keys(job)[4]);
-  if (result_test == Object.keys(job)[0]){
-    document.getElementById("text_output_test").innerHTML= Object.values(job)[0];
-    document.getElementById("id_output_test").style.visibility  = "visible";
-    console.log("object 0");
-  }
-  if (result_test == Object.keys(job)[1]){
-    document.getElementById("text_output_test").innerHTML= Object.values(job)[1];
-    document.getElementById("id_output_test").style.visibility  = "visible";
-    console.log("object 1");
-  }
-  if (result_test == Object.keys(job)[2]){
-    document.getElementById("text_output_test").innerHTML= Object.values(job)[2];
-    document.getElementById("id_output_test").style.visibility  = "visible";
-    console.log("object 2");
-  }
-  if (result_test == Object.keys(job)[3]){
-    document.getElementById("text_output_test").innerHTML= Object.values(job)[3];
-    document.getElementById("id_output_test").style.visibility  = "visible";
+  result_test= result_test.split(" ")
+  console.log("last_que", result_test);
+  let text_output = "";
+  for(let i=0; i<result_test.length; i++){
+    if (result_test[i] == Object.keys(job)[0]){
+      text_output = text_output + Object.values(job)[0];
+      console.log("object 0");
+    }
+      if (result_test[i] == Object.keys(job)[1]){
+      text_output= text_output + Object.values(job)[1];
+      console.log("object 1");
+    }
+    if (result_test[i] == Object.keys(job)[2]){
+      text_output=text_output + Object.values(job)[2];
+      console.log("object 2");
+    }
+    if (result_test[i] == Object.keys(job)[3]){
+    text_output = text_output + Object.values(job)[3];
     console.log("object 3");
     
-  }
-  if (result_test == Object.keys(job)[4]){
-    document.getElementById("text_output_test").innerHTML= Object.values(job)[4];
-    document.getElementById("id_output_test").style.visibility  = "visible";
+    }
+  if (result_test[i] == Object.keys(job)[4]){
+    text_output= text_output + Object.values(job)[4];
     console.log("object 4");
+    }
+  
   }
+  console.log(text_output);
+  document.getElementById("text_output_test").innerHTML = text_output;
+  document.getElementById("text_output_test").style.visibility  = 'visible';
+  document.getElementById("id_btn_result_school").style.visibility = 'visible'
   
 }
