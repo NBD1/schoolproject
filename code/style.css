@@ -240,9 +240,6 @@ background: linear-gradient(0deg, rgba(0,3,255,1) 0%, rgba(2,126,251,1) 100%);
     border: 5px solid #000;
   
   }
-.btn_result_school{
-  visibility: hidden;
-}
 /*.button_for_class{
   width: 100px;
   height: 100px;
