@@ -96,20 +96,31 @@ let job = {
 //Создание словаря в котором хранится 5 типов профессий, по классификации Е.А.Климова, а также профили для данных типов профессии
 let direction ={
   "priroda":{
-    "directions in the 8th grade": "Для данного типа вам подходят следующие профили классов подходят следующие профили"
-    },
+    "directions in the 8th grade": "Профиль 1 Профиль 2",
+    "directions in the 9th grade": "Профиль 3 Профиль 4",
+    "directions in the 10th-11th grade": "Профиль 5 Профиль 6"
+    //пока создано для теста потом заменить
+  },
   "technik" :{
-    "directions in the 8th grade": "Для данного типа вам подходят следующие профили классов подходят следующие профили"
+    "directions in the 8th grade": "Профиль 7 Профиль 8",
+    "directions in the 9th grade": "Профиль 9 Профиль 10",
+    "directions in the 10th-11th grade": "Профиль 11 Профиль 12"
   },
   "znakovayasistema":{
-    "directions in the 8th grade": "Для данного типа вам подходят следующие профили классов подходят следующие профили"
+    "directions in the 8th grade": "Профиль 13 Профиль 14",
+    "directions in the 9th grade": "Профиль 15 Профиль 16",
+    "directions in the 10th-11th grade": "Профиль 17 Профиль 18"
   },
   "hydozeshviniyobraz":{
-    "directions in the 8th grade": "Для данного типа вам подходят следующие профили классов подходят следующие профили"
+    "directions in the 8th grade": "Профиль 19 Профиль 20",
+    "directions in the 9th grade": "Профиль 21 Профиль 22",
+    "directions in the 10th-11th grade": "Профиль 23 Профиль 24"
   },
   "chelovek":{
-    "directions in the 8th grade": "Для данного типа вам подходят следующие профили классов подходят следующие профили"
-  }
+    "directions in the 8th grade": "Профиль 25 Профиль 26",
+    "directions in the 9th grade": "Профиль 27 Профиль 28",
+    "directions in the 10th-11th grade": "Профиль 29 Профиль 30"
+  },
 }
 
 console.log(Object.values(job)[0]);
@@ -392,5 +403,35 @@ function lastque(){
   document.getElementById("text_output_test").innerHTML = text_output;
   document.getElementById("text_output_test").style.visibility  = 'visible';
   document.getElementById("id_btn_result_school").style.visibility = 'visible'
-  
+  //Код для школ
+  let direction_after_test_8_class = "";
+  let direction_after_test_9_class = "";
+  let direction_after_test_10_11_class = "";
+  for(let i=0; i<result_test.length; i++){
+    if (result_test[i] == Object.keys(job)[0]){
+      direction_after_test_8_class = direction_after_test_8_class + Object.values(Object.values(direction)[0])[0];
+      direction_after_test_9_class = direction_after_test_9_class + Object.values(Object.values(direction)[0])[1];
+      direction_after_test_10_11_class = direction_after_test_10_11_class + Object.values(Object.values(direction)[0])[2];
+    }
+    if (result_test[i] == Object.keys(job)[1]){
+      direction_after_test_8_class = direction_after_test_8_class + Object.values(Object.values(direction)[1])[0];;
+      direction_after_test_9_class = direction_after_test_9_class + Object.values(Object.values(direction)[1])[1];
+      direction_after_test_10_11_class = direction_after_test_10_11_class + Object.values(Object.values(direction)[1])[2];
+    }
+    if (result_test[i] == Object.keys(job)[2]){
+      direction_after_test_8_class = direction_after_test_8_class + Object.keys(direction);
+      direction_after_test_9_class = direction_after_test_9_class + Object.keys(direction);
+      direction_after_test_10_11_class = direction_after_test_10_11_class + Object.keys(direction);
+    }
+    if (result_test[i] == Object.keys(job)[3]){
+      direction_after_test_8_class = direction_after_test_8_class + Object.keys(direction);
+      direction_after_test_9_class = direction_after_test_9_class + Object.keys(direction);
+      direction_after_test_10_11_class = direction_after_test_10_11_class + Object.keys(direction);
+    }
+    if (result_test[i] == Object.keys(job)[4]){
+      direction_after_test_8_class = direction_after_test_8_class + Object.values(Object.values(direction)[0]);
+      direction_after_test_9_class = direction_after_test_9_class + Object.keys(direction);
+      direction_after_test_10_11_class = direction_after_test_10_11_class + Object.keys(direction);
+    }
+  }
 }
